@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bf5ktc0bktara"]
+
+[ext_resource type="Texture2D" uid="uid://c1d1exj4vx7s3" path="res://Assets/Icons 16x16.png" id="1_ea6fm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpddd"]
+bg_color = Color(0, 0, 0, 0.64705884)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4x1l"]
+atlas = ExtResource("1_ea6fm")
+region = Rect2(194, 66, 12, 13)
+
+[node name="ButtonIcon" type="PanelContainer" unique_id=733364780]
+custom_minimum_size = Vector2(6, 6)
+offset_right = 12.0
+offset_bottom = 13.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_wpddd")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1362984726]
+layout_mode = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer" unique_id=1102458008]
+custom_minimum_size = Vector2(6, 6)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_l4x1l")

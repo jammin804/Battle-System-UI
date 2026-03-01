@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://bbvriq362r0mf"]
+
+[ext_resource type="Theme" uid="uid://b46wnm6jql60h" path="res://Scenes/default_theme.tres" id="1_oxf17"]
+[ext_resource type="PackedScene" uid="uid://da5yxb2ot3jax" path="res://Scenes/window_default.tscn" id="1_w7k78"]
+[ext_resource type="Texture2D" uid="uid://blw6ppexe56fu" path="res://Assets/Day-Sparse-Clouds-BG-Extra-Light-Green-FG.png" id="2_1ruyk"]
+[ext_resource type="Script" uid="uid://ckkx2m1pq43rj" path="res://Scripts/battle.gd" id="2_qeyqd"]
+[ext_resource type="Texture2D" uid="uid://mgnnps0t6fht" path="res://Assets/char_japan.png" id="4_1otgo"]
+[ext_resource type="PackedScene" uid="uid://djqj2eaega275" path="res://Scenes/battle_player.tscn" id="4_pd5xk"]
+[ext_resource type="Script" uid="uid://bptt4xcgqe576" path="res://Scripts/options.gd" id="5_k7mbx"]
+[ext_resource type="PackedScene" uid="uid://bya160g0agcrd" path="res://Scenes/battle_enemy.tscn" id="6_ww2ai"]
+[ext_resource type="Texture2D" uid="uid://chwid25ntp5r7" path="res://Assets/vampire.png" id="7_lrv64"]
+[ext_resource type="PackedScene" uid="uid://cv61qna35okhy" path="res://Scenes/battle_option_rotation.tscn" id="8_lrv64"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6xt6"]
+atlas = ExtResource("4_1otgo")
+region = Rect2(265, 186, 15, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrv64"]
+atlas = ExtResource("4_1otgo")
+region = Rect2(108, 188, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qeyqd"]
+atlas = ExtResource("7_lrv64")
+region = Rect2(374, 455, 31, 50)
+
+[node name="Battle" type="Control" unique_id=985705986]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_oxf17")
+script = ExtResource("2_qeyqd")
+
+[node name="BackgroundTemp" type="TextureRect" parent="." unique_id=71702979]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -91.0
+offset_right = 80.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1ruyk")
+metadata/_edit_use_anchors_ = true
+
+[node name="Bottom" type="HBoxContainer" parent="." unique_id=962565926]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -48.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Enemies" parent="Bottom" unique_id=1608720997 instance=ExtResource("1_w7k78")]
+layout_mode = 2
+
+[node name="Players" parent="Bottom" unique_id=1202038973 instance=ExtResource("1_w7k78")]
+layout_mode = 2
+size_flags_stretch_ratio = 1.66
+
+[node name="Options" parent="." unique_id=2005825305 instance=ExtResource("1_w7k78")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -83.0
+offset_top = -50.0
+offset_right = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Options" type="VBoxContainer" parent="Options" unique_id=1448521081]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_k7mbx")
+
+[node name="Button" type="Button" parent="Options/Options" unique_id=1398733154]
+layout_mode = 2
+text = "Fight"
+
+[node name="Button3" type="Button" parent="Options/Options" unique_id=1684805718]
+layout_mode = 2
+text = "Item"
+
+[node name="Button2" type="Button" parent="Options/Options" unique_id=1869774888]
+layout_mode = 2
+text = "Defend
+"
+
+[node name="Players" type="Control" parent="." unique_id=1702382927]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BattlePlayer2" parent="Players" unique_id=551344755 instance=ExtResource("4_pd5xk")]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 73.0
+offset_right = 263.0
+offset_bottom = 101.0
+texture_normal = SubResource("AtlasTexture_f6xt6")
+
+[node name="BattlePlayer" parent="Players" unique_id=860066927 instance=ExtResource("4_pd5xk")]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 61.0
+offset_right = 289.0
+offset_bottom = 89.0
+
+[node name="BattlePlayer4" parent="Players" unique_id=153695574 instance=ExtResource("4_pd5xk")]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 73.0
+offset_right = 315.0
+offset_bottom = 101.0
+texture_normal = SubResource("AtlasTexture_lrv64")
+
+[node name="Enemies" type="Control" parent="." unique_id=48347419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BattleEnemy" parent="Enemies" unique_id=1167380219 instance=ExtResource("6_ww2ai")]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 47.0
+offset_right = 85.0
+offset_bottom = 104.0
+texture_normal = SubResource("AtlasTexture_qeyqd")
+
+[node name="BattleEnemy2" parent="Enemies" unique_id=354450724 instance=ExtResource("6_ww2ai")]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 77.0
+offset_right = 49.0
+offset_bottom = 127.0
+texture_normal = SubResource("AtlasTexture_qeyqd")
+
+[node name="BattleOptionRotation" parent="." unique_id=1424001824 instance=ExtResource("8_lrv64")]
+layout_mode = 1

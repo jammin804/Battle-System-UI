@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cwbtd8gogarpf"]
+
+[ext_resource type="Texture2D" uid="uid://c1d1exj4vx7s3" path="res://Assets/Icons 16x16.png" id="1_tco6x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lrv64"]
+bg_color = Color(0, 0, 0, 0.60784316)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9411765, 0.78039217, 0.58431375, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84v35"]
+atlas = ExtResource("1_tco6x")
+region = Rect2(178, 65, 11, 13)
+
+[node name="BattleIconContainer" type="PanelContainer" unique_id=592048858]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -48.153847
+offset_right = -66.0
+offset_bottom = -30.846153
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lrv64")
+
+[node name="BattleIcon" type="TextureButton" parent="." unique_id=658736080]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_84v35")

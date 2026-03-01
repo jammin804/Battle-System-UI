@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://djqj2eaega275"]
+
+[ext_resource type="Texture2D" uid="uid://mgnnps0t6fht" path="res://Assets/char_japan.png" id="1_sd2tt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pd5xk"]
+atlas = ExtResource("1_sd2tt")
+region = Rect2(186, 44, 18, 28)
+
+[node name="BattlePlayer" type="TextureButton" unique_id=551344755]
+offset_left = 272.0
+offset_top = 58.0
+offset_right = 290.0
+offset_bottom = 86.0
+texture_normal = SubResource("AtlasTexture_pd5xk")

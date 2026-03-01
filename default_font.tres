@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" format=3 uid="uid://dk021hrv5xoi"]
+
+[ext_resource type="FontFile" uid="uid://63v0qbuyxwyb" path="res://Fonts/DotGothic16-Regular.ttf" id="1_gp0bv"]
+
+[sub_resource type="FontVariation" id="FontVariation_fjfxt"]
+base_font = ExtResource("1_gp0bv")
+
+[resource]
+base_font = SubResource("FontVariation_fjfxt")

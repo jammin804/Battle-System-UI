@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://da5yxb2ot3jax"]
+
+[ext_resource type="Texture2D" uid="uid://fm0mqtfvh2bi" path="res://Assets/2.png" id="1_xf4fp"]
+[ext_resource type="Script" uid="uid://d1idybx0lfg6b" path="res://Scripts/window_default.gd" id="2_c8mgr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tqkx"]
+atlas = ExtResource("1_xf4fp")
+
+[node name="WindowDefault" type="TextureRect" unique_id=1608720997]
+size_flags_horizontal = 3
+texture = SubResource("AtlasTexture_0tqkx")
+expand_mode = 1
+script = ExtResource("2_c8mgr")

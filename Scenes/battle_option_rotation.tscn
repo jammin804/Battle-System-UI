@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://cv61qna35okhy"]
+
+[ext_resource type="PackedScene" uid="uid://bf5ktc0bktara" path="res://Scenes/button_icon.tscn" id="1_5638j"]
+[ext_resource type="Texture2D" uid="uid://c1d1exj4vx7s3" path="res://Assets/Icons 16x16.png" id="1_v3kbo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qf22w"]
+bg_color = Color(0, 0, 0, 0.64705884)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcv7f"]
+atlas = ExtResource("1_v3kbo")
+region = Rect2(194, 50, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3kbo"]
+atlas = ExtResource("1_v3kbo")
+region = Rect2(178, 65, 11, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qf22w"]
+atlas = ExtResource("1_v3kbo")
+region = Rect2(179, 34, 10, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ym3v"]
+atlas = ExtResource("1_v3kbo")
+region = Rect2(211, 19, 11, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad0nd"]
+atlas = ExtResource("1_v3kbo")
+region = Rect2(211, 34, 11, 12)
+
+[node name="BattleOptionRotation" type="Control" unique_id=1424001824]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonIconDefendContainer" type="PanelContainer" parent="." unique_id=1675637396]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 45.0
+offset_right = 263.0
+offset_bottom = 62.0
+scale = Vector2(0.8, 0.8)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qf22w")
+
+[node name="MarginContainer" type="MarginContainer" parent="ButtonIconDefendContainer" unique_id=714468297]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="ButtonIconDefend" type="TextureButton" parent="ButtonIconDefendContainer/MarginContainer" unique_id=1837569946]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_wcv7f")
+
+[node name="ButtonIconMagicContainer" type="PanelContainer" parent="." unique_id=1297517108]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 45.0
+offset_right = 218.0
+offset_bottom = 63.0
+scale = Vector2(0.8, 0.8)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qf22w")
+
+[node name="MarginContainer" type="MarginContainer" parent="ButtonIconMagicContainer" unique_id=1656418049]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="ButtonIconMagic" type="TextureButton" parent="ButtonIconMagicContainer/MarginContainer" unique_id=308614611]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_v3kbo")
+
+[node name="ButtonIconItemContainer" type="PanelContainer" parent="." unique_id=1918656774]
+custom_minimum_size = Vector2(17, 18)
+layout_mode = 0
+offset_left = 207.9
+offset_top = 33.95294
+offset_right = 221.9
+offset_bottom = 50.95294
+scale = Vector2(0.6, 0.6)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qf22w")
+
+[node name="MarginContainer" type="MarginContainer" parent="ButtonIconItemContainer" unique_id=1016034151]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 1
+
+[node name="ButtonIconItem" type="TextureButton" parent="ButtonIconItemContainer/MarginContainer" unique_id=232038215]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_qf22w")
+
+[node name="ButtonIconFleeContainer" type="PanelContainer" parent="." unique_id=1284620270]
+custom_minimum_size = Vector2(17, 18)
+layout_mode = 0
+offset_left = 241.0
+offset_top = 33.95294
+offset_right = 258.0
+offset_bottom = 51.95294
+scale = Vector2(0.6, 0.6)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qf22w")
+
+[node name="MarginContainer" type="MarginContainer" parent="ButtonIconFleeContainer" unique_id=1091490598]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 1
+
+[node name="ButtonIconFlee" type="TextureButton" parent="ButtonIconFleeContainer/MarginContainer" unique_id=428384969]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_7ym3v")
+
+[node name="ButtonIconMoveContainer" type="PanelContainer" parent="." unique_id=1592857466]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 32.0
+offset_right = 243.0
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qf22w")
+
+[node name="MarginContainer" type="MarginContainer" parent="ButtonIconMoveContainer" unique_id=947941324]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="ButtonIconMove" type="TextureButton" parent="ButtonIconMoveContainer/MarginContainer" unique_id=1091498042]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_ad0nd")
+
+[node name="ButtonIconAttack" parent="." unique_id=733364780 instance=ExtResource("1_5638j")]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 50.0
+offset_right = 238.0
+offset_bottom = 67.0
