@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bhm2hxgoe5hr2"]
+
+[ext_resource type="Texture2D" uid="uid://c1582gl6rwg2l" path="res://Assets/tf_japan_master.png" id="1_p0rjr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxn1w"]
+atlas = ExtResource("1_p0rjr")
+region = Rect2(592, 387, 16, 13)
+
+[node name="PanelContainer" type="PanelContainer" unique_id=1795393935]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=866225269]
+layout_mode = 2
+color = Color(0.008244881, 0.5003445, 1.6849588, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=353299548]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = SubResource("AtlasTexture_hxn1w")
+expand_mode = 1

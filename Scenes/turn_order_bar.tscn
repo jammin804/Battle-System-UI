@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://cfeshnv3bym43"]
+
+[ext_resource type="Texture2D" uid="uid://btya81clin0pm" path="res://Assets/4.png" id="1_b7q1i"]
+[ext_resource type="Texture2D" uid="uid://c1582gl6rwg2l" path="res://Assets/tf_japan_master.png" id="1_hxsac"]
+[ext_resource type="PackedScene" uid="uid://bhm2hxgoe5hr2" path="res://Scenes/character_display_container.tscn" id="1_vbrc6"]
+[ext_resource type="Texture2D" uid="uid://lb8uqkyee2ek" path="res://Assets/3.png" id="2_vbrc6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxsac"]
+bg_color = Color(0.099985994, 0.09998601, 0.099985965, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.25929382, 0.25929368, 0.25929353, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdbae"]
+atlas = ExtResource("1_hxsac")
+region = Rect2(592, 387, 16, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxsac"]
+atlas = ExtResource("1_hxsac")
+region = Rect2(208, 547, 16, 14)
+
+[node name="TurnOrderBar" type="Control" unique_id=1856265195]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1799079934]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 30.0
+offset_bottom = -65.0
+grow_vertical = 2
+theme_override_constants/margin_top = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1737087554]
+custom_minimum_size = Vector2(25, 100)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hxsac")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/PanelContainer" unique_id=2134981438]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/ScrollContainer" unique_id=1709217730]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_top = 17
+theme_override_constants/margin_right = 0
+
+[node name="CharacterContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/ScrollContainer/MarginContainer" unique_id=1539083601]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="CharacterContainer2" parent="MarginContainer/PanelContainer/ScrollContainer/MarginContainer/CharacterContainer" unique_id=1795393935 instance=ExtResource("1_vbrc6")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2059810781]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 40
+
+[node name="Top" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=199800174]
+custom_minimum_size = Vector2(30, 17)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_b7q1i")
+expand_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1857643656]
+layout_mode = 2
+
+[node name="Bottom" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=896976207]
+custom_minimum_size = Vector2(30, 17)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_vbrc6")
+expand_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=488631356]
+visible = false
+layout_mode = 0
+offset_left = 13.0
+offset_top = 19.0
+offset_right = 28.0
+offset_bottom = 34.0
+scale = Vector2(1.2, 1.2)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer2" unique_id=1470411453]
+layout_mode = 2
+color = Color(0.008244881, 0.5003445, 1.6849588, 1)
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer2" unique_id=999810656]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = SubResource("AtlasTexture_vdbae")
+expand_mode = 1
+
+[node name="PanelContainer5" type="PanelContainer" parent="." unique_id=1613433816]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 72.0
+offset_right = 21.0
+offset_bottom = 87.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer5" unique_id=193794057]
+layout_mode = 2
+color = Color(0.008244881, 0.5003445, 1.6849588, 1)
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer5" unique_id=1654193344]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = SubResource("AtlasTexture_vdbae")
+expand_mode = 1
+
+[node name="PanelContainer3" type="PanelContainer" parent="." unique_id=2095141927]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 37.0
+offset_right = 21.0
+offset_bottom = 52.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer3" unique_id=1247673037]
+layout_mode = 2
+color = Color(1.4778416, 0.013026982, 0.29437992, 1)
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer3" unique_id=1741671082]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = SubResource("AtlasTexture_hxsac")
+expand_mode = 1
+
+[node name="PanelContainer4" type="PanelContainer" parent="." unique_id=596555612]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 54.0
+offset_right = 21.0
+offset_bottom = 69.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer4" unique_id=1661817491]
+layout_mode = 2
+color = Color(1.4778416, 0.013026982, 0.29437992, 1)
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer4" unique_id=922380325]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = SubResource("AtlasTexture_hxsac")
+expand_mode = 1
