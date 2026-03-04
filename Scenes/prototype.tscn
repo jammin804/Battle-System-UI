@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://i4vtrlnr8c6b"]
+
+[ext_resource type="Texture2D" uid="uid://c8ac6h8fjjjuq" path="res://Assets/43.png" id="1_6ox75"]
+
+[sub_resource type="Theme" id="Theme_4ousu"]
+
+[node name="Prototype" type="Control" unique_id=921418957]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = 11.0
+offset_right = -35.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4ousu")
+
+[node name="Panel" type="NinePatchRect" parent="." unique_id=570433218]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -46.0
+offset_right = 46.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6ox75")
+region_rect = Rect2(0, 0, 24, 24)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1444230830]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Inventory" type="Button" parent="Panel/VBoxContainer" unique_id=2144004967]
+layout_mode = 2
+text = "Inventory"
+
+[node name="Party" type="Button" parent="Panel/VBoxContainer" unique_id=1256000235]
+layout_mode = 2
+text = "Party"
+
+[node name="Quit" type="Button" parent="Panel/VBoxContainer" unique_id=1150614482]
+layout_mode = 2
+text = "Quit"

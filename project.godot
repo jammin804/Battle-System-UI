@@ -39,6 +39,7 @@ folder_colors={
 [gui]
 
 theme/default_font_antialiasing=0
+theme/custom_font="uid://63v0qbuyxwyb"
 
 [physics]
 

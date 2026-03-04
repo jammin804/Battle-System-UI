@@ -1,0 +1,19 @@
+[gd_resource type="Theme" format=3 uid="uid://c0hpv4vdp7128"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpgwj"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+bg_color = Color(0.6889972, 0.54162407, 0.39534307, 1)
+border_width_bottom = 4
+border_color = Color(0.84313726, 0.70980394, 0.5803922, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 2
+
+[resource]
+Button/font_sizes/font_size = 8
+Button/styles/normal = SubResource("StyleBoxFlat_wpgwj")
