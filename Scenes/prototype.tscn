@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://i4vtrlnr8c6b"]
 
+[ext_resource type="Theme" uid="uid://c0hpv4vdp7128" path="res://Theme  & Stylebox/normal_button.tres" id="1_4ousu"]
 [ext_resource type="Texture2D" uid="uid://c8ac6h8fjjjuq" path="res://Assets/43.png" id="1_6ox75"]
-
-[sub_resource type="Theme" id="Theme_4ousu"]
 
 [node name="Prototype" type="Control" unique_id=921418957]
 layout_mode = 3
@@ -15,7 +14,7 @@ offset_right = -35.0
 offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_4ousu")
+theme = ExtResource("1_4ousu")
 
 [node name="Panel" type="NinePatchRect" parent="." unique_id=570433218]
 layout_mode = 1

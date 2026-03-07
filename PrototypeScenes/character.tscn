@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c1q8i4emfblgo"]
+
+[ext_resource type="Texture2D" uid="uid://chwid25ntp5r7" path="res://Assets/vampire.png" id="1_3vjem"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjbvf"]
+atlas = ExtResource("1_3vjem")
+region = Rect2(62, 158, 30, 58)
+
+[node name="Character" type="CharacterBody2D" unique_id=764649409]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=361326045]
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+texture = SubResource("AtlasTexture_vjbvf")
+
+[node name="focus" type="Sprite2D" parent="." unique_id=1759254772]
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=322238847]
+offset_left = -8.0
+offset_top = -15.0
+offset_right = 92.0
+offset_bottom = 13.0
+scale = Vector2(0.15, 0.15)
+value = 100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=938010472]

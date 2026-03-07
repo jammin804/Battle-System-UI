@@ -76,6 +76,7 @@ size_flags_stretch_ratio = 1.66
 
 [node name="Options" parent="." unique_id=2005825305 instance=ExtResource("1_w7k78")]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(48, 50)
 layout_mode = 1
 anchors_preset = 7
@@ -174,6 +175,7 @@ texture_normal = SubResource("AtlasTexture_qeyqd")
 layout_mode = 1
 
 [node name="TurnOrderBar" parent="." unique_id=1856265195 instance=ExtResource("11_upb72")]
+visible = false
 layout_mode = 1
 offset_left = 12.0
 offset_top = 21.0
